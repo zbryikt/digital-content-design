@@ -40,7 +40,8 @@ html(lang="en")
         div 上課地點：#[a(href="http://edu.cc.fju.edu.tw/m_room.html",target="_blank") 文開樓 402 電腦教室]
         +nbr(2)
         a.btn.btn-primary.spc-right(href="#course-list") 課表
-        a.btn.btn-primary(href="http://140.136.251.64/outlines/student/outline.aspx?dayngt=D%20&grono=IG%20&dptno=12&hy=106&ht=1&avano=D120230201%20&tchno=138888&isdone=True#session1") 輔大課綱網址
+        a.btn.btn-primary.spc-right(href="http://140.136.251.64/outlines/student/outline.aspx?dayngt=D%20&grono=IG%20&dptno=12&hy=106&ht=1&avano=D120230201%20&tchno=138888&isdone=True#session1") 輔大課綱網址
+        a.btn.btn-primary(href="mailto:tkirby@gmail.com") 聯絡老師
         +nbr(4)
     .block1024
       +nbr(2)
@@ -60,8 +61,11 @@ html(lang="en")
       p "#[a(href="http://shop.oreilly.com/product/0636920023494.do") Learning Web Design, 4th Edition]" By Jennifer Niederst Robbins, O'Reilly Media, 2012 #[br] #[small.red * 以參考為主，並不會依教科書內容與順序教學]
 
       +nbr(3)
-      h2 課表 #[a#course-list.anchor]
-      .sep.huge-gap
+      .block
+        h2.inline-block.spc-right 課表 #[a#course-list.anchor]
+        small.grayed / 由於課程難度較高，將隨同學學習狀況調整速度與內容。
+      .sep
+      +nbr(1)
       h4 九月 / September
       table.course-list
         tr #[td 01] #[td 09/21] #[td: a(href='/01/'): i.fa.fa-link] #[td 課程簡介與案例賞析]
@@ -94,7 +98,14 @@ html(lang="en")
         tr #[td 16] #[td 01/04] #[td: a(href='/16/'): i.fa.fa-link] #[td 跨體驗的數位內容: 響應式網頁製作 / RWD, Media Query, Accessibility]
         tr #[td 17] #[td 01/11] #[td: a(href='/17/'): i.fa.fa-link] #[td 互動設計入門]
         tr.red #[td 18] #[td 01/18] #[td: a(href='/18/'): i.fa.fa-link] #[td 期末分組成果發表]
-    +nbr(6)
+      +nbr(4)
+      .block
+        h2.inline-block.spc-right 課程討論
+        small.grayed / 任何課程相關的問題都可以在這裡討論喔！
+      .sep
+      +nbr(1)
+      include /disqus.jade
+    +nbr(3)
   +css("index.css")
   +script("base.js")
   +script("index.js")
