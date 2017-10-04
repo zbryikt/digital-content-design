@@ -7,28 +7,6 @@ html,body
   margin: 0
   padding: 0
 
-.block1024
-  max-width: 1024px
-  width: 95%
-  margin: auto
-
-.spc-right
-  margin-right: 5px
-
-.sep
-  border-top: 1px solid rgba(0,0,0,0.2)
-  width: 100%
-  margin: 7px auto
-  height: 0
-.sep.huge-gap
-  margin: 21px auto
-.sep.dashed
-  border-top-style: dashed
-.sep.nogap
-  margin: 0 auto
-.sep.light
-  border-top: 1px solid rgba(0,0,0,0.1)
-
 table.course-list
   width: 100%
   margin: 20px 0
@@ -63,8 +41,18 @@ table.course-list
         cursor: pointer
         opacity: 1
 
-  tr.current td:first-child
-    border-right-color: #0f0
+  tr.current
+    background: #efe
+    td:first-child
+      border-right-color: #0f0
+    td:last-child:after
+      content: '本週'
+      display: inline-block
+      float: right
+      font-size: 0.7em
+      color: #999
+      margin-right: 5px
+      line-height: 2.2em
 
 .jumbotron-fluid
   background: #222
@@ -79,3 +67,12 @@ table.course-list
     width: 400px
     margin: auto
     padding-top: 5px
+
+a.btn
+  color: #fff
+
+a.anchor
+  margin-top: -60px
+  position: absolute
+
+@import 'lib.styl'

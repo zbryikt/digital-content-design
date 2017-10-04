@@ -3,7 +3,7 @@ doctype html
 //-                  fontawesome(4.4.0), reactjs(0.14.0)
 - var use = { cdn: false, og: false, favicon: true }
 - var lib = { jquery: true, d3js: false, angular: true, bootstrap: true, semantic: false, fontawesome: true, reactjs: false, revealjs: false, ionrangeslider: false, ldcolorpicker: false }
-- var assets = "assets"
+- var assets = "/assets"
 - var favicon = "thumbnail.png"
 - var title = "template"
 - var og = {}
@@ -39,11 +39,28 @@ html(lang="en")
         div 上課時間：每周四 12:40 ~ 15:30
         div 上課地點：#[a(href="http://edu.cc.fju.edu.tw/m_room.html",target="_blank") 文開樓 402 電腦教室]
         +nbr(2)
-        .btn.btn-primary 課表
+        a.btn.btn-primary.spc-right(href="#course-list") 課表
+        a.btn.btn-primary(href="http://140.136.251.64/outlines/student/outline.aspx?dayngt=D%20&grono=IG%20&dptno=12&hy=106&ht=1&avano=D120230201%20&tchno=138888&isdone=True#session1") 輔大課綱網址
         +nbr(3)
     .block1024
       +nbr(2)
-      h2 課表
+      h2 課程簡介
+      .sep.huge-gap
+
+      p 隨著電腦與網路技術的發展，有越來越多的內容用數位的方式表現。數位內容需要進階的技能與概念，因此，本課程目標在帶領學生了解數位時代的內容產製方式、流程與內容的整體樣貌，並學習從基本的內容製作到內容管理與維護，包含以下面向：
+      ul
+        li #[b 組成] - 製作網路內容的基本技術
+        li #[b 架構] - 資訊設計、數位內容的架構與數位的敘事手法
+        li #[b 外觀] - 內容包裝、傳播形式與傳播效率分析
+        li #[b 管理] - 內容的管理與維護
+
+      p 課程偏重實作，並讓學生透過專題形而學習基本網頁設計等技能，在學期末以專案形式發表學習成果。
+      +nbr(1)
+      h4 指定教材
+      p "#[a(href="http://shop.oreilly.com/product/0636920023494.do") Learning Web Design, 4th Edition]" By Jennifer Niederst Robbins, O'Reilly Media, 2012 #[br] #[small.red * 以參考為主，並不會依教科書內容與順序教學]
+
+      +nbr(3)
+      h2 課表 #[a#course-list.anchor]
       .sep.huge-gap
       h4 九月 / September
       table.course-list

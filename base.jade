@@ -4,7 +4,7 @@ doctype html
 //-                  fontawesome(4.4.0), reactjs(0.14.0)
 - var use = { cdn: false, og: false, favicon: true }
 - var lib = { jquery: true, d3js: false, angular: true, bootstrap: true, semantic: false, fontawesome: true, reactjs: false, revealjs: false, ionrangeslider: false, ldcolorpicker: false }
-- var assets = "assets"
+- var assets = "/assets"
 - var favicon = "thumbnail.png"
 - var title = "template"
 - var og = {}
@@ -28,18 +28,19 @@ html(lang="en")
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= title
     // libraries
-    include library.jade
+    include /library.jade
     // custom files
   body
     .jumbotron-fluid.text-center
       .container-fluid
-        +nbr(3)
+        +nbr(2)
         h1 數位內容設計
         .subtitle Digital Content Design
-        br
-        div 上課時間：每周四 12:40 ~ 15:30
-        div 上課地點：#[a(href="http://edu.cc.fju.edu.tw/m_room.html",target="_blank") 文開樓 402 電腦教室]
-        +nbr(2)
-        .btn.btn-primary 課表
+        +nbr(1)
+        a.btn.btn-primary(href="/") 完整課表
         +nbr(3)
-    block body
+    +nbr(2)
+    .block1024
+      block body
+  +css("/index.css")
+  +script("/base.js")
